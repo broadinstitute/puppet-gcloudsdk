@@ -1,0 +1,9 @@
+<%- | Boolean $zsh_completion,
+      Stdlib::Absolutepath $install_path,
+| -%>
+#!/bin/zsh
+
+source <%= $install_path %>/path.zsh.inc
+<% if $zsh_completion { -%>
+source <%= $install_path %>/completion.zsh.inc
+<% } -%>
