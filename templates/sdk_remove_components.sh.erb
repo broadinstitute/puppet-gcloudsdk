@@ -8,9 +8,8 @@
 
 <% if @is_install_bq != true %>
   '<%= @install_path %>'/bin/gcloud components remove bq -q
-<% end %>      
-        
+<% end %>
+
 <% if @is_install_gcloud != true %>
   '<%= @install_path %>'/bin/gcloud components remove gcloud -q
 <% end %>
-

@@ -14,7 +14,7 @@ Download and Install Google Cloud Sdk.
 
 ### Module Description
 
-Google Cloud SDK is a set of tools that you can use to manage resources and applications hosted on Google Cloud Platform. 
+Google Cloud SDK is a set of tools that you can use to manage resources and applications hosted on Google Cloud Platform.
 
 These tools include:
 
@@ -96,4 +96,3 @@ Interested contributors can touch base with Ranjith (kumar.sree45@gmail.com)
 [usage]: https://github.com/RanjthKumar45/puppet-gcloudsdk#usage
 [authors]: https://github.com/RanjthKumar45/puppet-gcloudsdk#authors
 [development]: https://github.com/RanjthKumar45/puppet-gcloudsdk#development
-

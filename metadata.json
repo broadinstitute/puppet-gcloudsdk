@@ -1,35 +1,35 @@
 {
   "author": "RanjithKumar45",
   "dependencies": [
-  	{
-  	"name": "puppetlabs/stdlib","version_requirement":">= 2.4.0"
-  	},
-  	{
-  	"name":"camptocamp/archive","version_requirement":">= 0.8.1" 		
-  	}	
+	{
+	"name": "puppetlabs/stdlib","version_requirement":">= 2.4.0"
+	},
+	{
+	"name":"camptocamp/archive","version_requirement":">= 0.8.1"
+	}
   ],
   "license": "Apache-2.0",
   "name": "RanjithKumar45-gcloudsdk",
   "operatingsystem_support": [{
-  	"operatingsystem": "CentOS, Ubuntu, Debian"
+	"operatingsystem": "CentOS, Ubuntu, Debian"
   }],
   "project_page": "https://github.com/RanjthKumar45/puppet-gcloudsdk",
   "requirements": [{
-      "name": "puppet",
-      "version_requirement": ">= 3.8.4 < 5.0.0"
-    }],
+	  "name": "puppet",
+	  "version_requirement": ">= 3.8.4 < 5.0.0"
+	}],
   "source": "https://github.com/RanjthKumar45/puppet-gcloudsdk",
   "issues_url": "https://github.com/RanjthKumar45/puppet-gcloudsdk",
   "summary": "Installs Google Cloud SDK with selected tools",
   "tags": [
-  	"google-cloud-sdk",
-  	"sdk",
-  	"gsutil",
-    "gcloud",
-    "bq",
-    "google",
-    "cloud",
-    "storage"
+	"google-cloud-sdk",
+	"sdk",
+	"gsutil",
+	"gcloud",
+	"bq",
+	"google",
+	"cloud",
+	"storage"
   ],
   "version": "1.2.0"
 }
