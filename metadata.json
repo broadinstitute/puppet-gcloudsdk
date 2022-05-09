@@ -1,35 +1,83 @@
 {
-  "author": "RanjithKumar45",
-  "dependencies": [
-  	{
-  	"name": "puppetlabs/stdlib","version_requirement":">= 2.4.0"
-  	},
-  	{
-  	"name":"camptocamp/archive","version_requirement":">= 0.8.1" 		
-  	}	
-  ],
-  "license": "Apache-2.0",
-  "name": "RanjithKumar45-gcloudsdk",
-  "operatingsystem_support": [{
-  	"operatingsystem": "CentOS, Ubuntu, Debian"
-  }],
-  "project_page": "https://github.com/RanjthKumar45/puppet-gcloudsdk",
-  "requirements": [{
-      "name": "puppet",
-      "version_requirement": ">= 3.8.4 < 5.0.0"
-    }],
-  "source": "https://github.com/RanjthKumar45/puppet-gcloudsdk",
-  "issues_url": "https://github.com/RanjthKumar45/puppet-gcloudsdk",
+  "name": "broadinstitute-gcloudsdk",
+  "version": "2.0.0",
+  "author": "broadinstitute",
   "summary": "Installs Google Cloud SDK with selected tools",
+  "license": "Apache-2.0",
+  "source": "https://github.com/broadinstitute/puppet-gcloudsdk",
+  "project_page": "https://github.com/broadinstitute/puppet-gcloudsdk",
+  "issues_url": "https://github.com/broadinstitute/puppet-gcloudsdk",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 2.4.0 < 9"
+    },
+    {
+      "name": "puppet/archive",
+      "version_requirement": ">= 1.0.0 < 7"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9",
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "18.04",
+        "20.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4 < 8.0.0"
+    }
+  ],
   "tags": [
-  	"google-cloud-sdk",
-  	"sdk",
-  	"gsutil",
+    "google-cloud-sdk",
+    "sdk",
+    "gsutil",
     "gcloud",
     "bq",
     "google",
     "cloud",
     "storage"
   ],
-  "version": "1.2.0"
+  "pdk-version": "2.0.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates#2.4.0",
+  "template-ref": "2.4.0-0-gfa6b6d2"
 }

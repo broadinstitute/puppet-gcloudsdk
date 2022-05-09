@@ -1,0 +1,7 @@
+---
+gcloudsdk::autoupdate: false
+gcloudsdk::bash_completion: false
+gcloudsdk::extra_components: {}
+gcloudsdk::install_dir: '/opt'
+gcloudsdk::version: '380.0.0'
+gcloudsdk::zsh_completion: false

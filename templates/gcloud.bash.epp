@@ -1,0 +1,9 @@
+<%- | Boolean $bash_completion,
+      Stdlib::Absolutepath $install_path,
+| -%>
+#!/bin/bash
+
+source <%= $install_path %>/path.bash.inc
+<% if $bash_completion { -%>
+source <%= $install_path %>/completion.bash.inc
+<% } -%>
