@@ -8,7 +8,7 @@
 # @param ensure
 #   The ensure status of the component, either 'absent' or 'installed'
 #
-# @param id
+# @param component_id
 #   The ID of the component to install
 #
 define gcloudsdk::component (
