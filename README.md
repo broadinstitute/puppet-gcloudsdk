@@ -61,8 +61,9 @@ class { 'gcloudsdk':
   bash_completion => true,
   zsh_completion  => true,
 }
+```
 
-If you need to add any additional gcloud components, you can do this with the `gcloud::component` defined type using the component's ID:
+If you need to add any additional gcloud components, you can do this with the `gcloudsdk::component` defined type using the component's ID:
 
 ```puppet
 gcloudsdk::component { 'bigtable':
@@ -73,7 +74,7 @@ gcloudsdk::component { 'minikube':
 }
 ```
 
-Components can also be added directly throug a call to the gcloudsk class:
+Components can also be added directly throug a call to the `gcloudsk` class:
 
 ```puppet
 class { 'gcloudsdk':
