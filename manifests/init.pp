@@ -38,9 +38,9 @@ class gcloudsdk (
   Stdlib::Absolutepath $install_dir,
   String $version,
   Boolean $zsh_completion,
-){
+) {
   # Check the Architecture of Node to form the download URL
-  if ($::architecture == 'amd64') or ($::architecture == 'x86_64') {
+  if ($facts['os']['architecture'] == 'amd64') or ($facts['os']['architecture'] == 'x86_64') {
     $arch = 'x86_64'
   } else {
     $arch = 'x86'
@@ -76,10 +76,12 @@ class gcloudsdk (
   # The below code will set the google-cloud-sdk path inside the PATH env variable.
   file { '/etc/profile.d/gcloud.bash.sh':
     ensure  => file,
-    content => epp('gcloudsdk/gcloud.bash.epp', {
-      bash_completion => $bash_completion,
-      install_path    => $install_path,
-    }),
+    content => epp('gcloudsdk/gcloud.bash.epp',
+      {
+        bash_completion => $bash_completion,
+        install_path    => $install_path,
+      }
+    ),
     mode    => '0644',
     require => Archive[$download_file_path],
   }
@@ -87,10 +89,12 @@ class gcloudsdk (
   # The below code will set the google-cloud-sdk path inside the PATH env variable.
   file { '/etc/profile.d/gcloud.zsh.sh':
     ensure  => file,
-    content => epp('gcloudsdk/gcloud.zsh.epp', {
-      zsh_completion => $zsh_completion,
-      install_path   => $install_path,
-    }),
+    content => epp('gcloudsdk/gcloud.zsh.epp',
+      {
+        zsh_completion => $zsh_completion,
+        install_path   => $install_path,
+      }
+    ),
     mode    => '0644',
     require => Archive[$download_file_path],
   }
@@ -102,7 +106,7 @@ class gcloudsdk (
       # Note: gcloud complains if component work happens within the gcloud directory
       cwd     => '/tmp',
       path    => ['/bin', '/sbin', '/usr/bin', '/usr/sbin', "${gcloudsdk::install_dir}/google-cloud-sdk/bin"],
-      onlyif  => "gcloud components list --format='csv(ID,Status)' 2>/dev/null | grep -q 'Update Available'"
+      onlyif  => "gcloud components list --format='csv(ID,Status)' 2>/dev/null | grep -q 'Update Available'",
     }
   }
 
