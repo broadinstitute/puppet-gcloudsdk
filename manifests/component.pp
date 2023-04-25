@@ -24,7 +24,7 @@ define gcloudsdk::component (
       # Note: gcloud complains if component work happens within the gcloud directory
       cwd     => '/tmp',
       path    => ['/bin', '/sbin', '/usr/bin', '/usr/sbin', "${gcloudsdk::install_dir}/google-cloud-sdk/bin"],
-      unless  => "gcloud components list --format='csv(ID,Status)' 2>/dev/null | grep -q '^${component_id},Installed'",
+      unless  => "gcloud components list --format='csv(ID,Status)' 2>/dev/null | grep -q '^${component_id},[Installed|Update]'",
     }
   }
 
