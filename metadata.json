@@ -1,6 +1,6 @@
 {
   "name": "broadinstitute-gcloudsdk",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "broadinstitute",
   "summary": "Installs Google Cloud SDK with selected tools",
   "license": "Apache-2.0",
