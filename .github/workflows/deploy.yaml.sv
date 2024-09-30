@@ -5,53 +5,8 @@ name: 'deploy'
   push:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
-
 jobs:
-  forge_deploy:
-
-    runs-on: 'ubuntu-latest'
-
-    steps:
-      - name: 'Checkout repo'
-        uses: 'actions/checkout@v3'
-
-      - name: 'Set up Ruby'
-        uses: 'ruby/setup-ruby@v1.133.0'
-        with:
-          rubygems: 'latest'
-          ruby-version: '2.7'
-
-      - name: Get full Ruby version
-        id: full-ruby-version
-        run: |
-          ruby -e 'puts RUBY_VERSION' | awk '{print "ruby_version="$1}' >> $GITHUB_ENV
-
-      - name: 'Cache Ruby'
-        uses: 'actions/cache@v3'
-        with:
-          path: 'vendor/bundle'
-          key: ${{ runner.os }}-${{ env.ruby_version }}-v1-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.ruby_version }}-v1-gems-
-
-      - name: 'Update RubyGems and install bundler'
-        run: |
-          gem update --system
-          gem install bundler
-          gem --version
-          bundler --version
-
-      - name: 'Install ruby dependencies'
-        run: |
-          bundle config path vendor/bundle
-          bundle config set with 'development'
-          bundle install --jobs 4 --retry 3
-
-      - name: 'Module build'
-        run: 'bundle exec rake module:build'
-
-      - name: 'Publish package to Puppet Forge'
-        env:
-          BLACKSMITH_FORGE_URL: 'https://forgeapi.puppet.com'
-          BLACKSMITH_FORGE_API_KEY: ${{ secrets.BLACKSMITH_FORGE_API_KEY }}
-        run: 'bundle exec rake module:push'
+  deploy:
+    uses: broadinstitute/shared-workflows/.github/workflows/puppet-forge-deploy.yaml@v2.2.0
+    secrets:
+      forge_token: ${{ secrets.BLACKSMITH_FORGE_API_KEY }}

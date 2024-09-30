@@ -10,7 +10,7 @@
 
 ### Defined types
 
-* [`gcloudsdk::component`](#gcloudsdkcomponent): Manage a gcloud component's installation status
+* [`gcloudsdk::component`](#gcloudsdk--component): Manage a gcloud component's installation status
 
 ## Classes
 
@@ -38,46 +38,46 @@ class { 'gcloudsdk':
 
 The following parameters are available in the `gcloudsdk` class:
 
-* [`autoupdate`](#autoupdate)
-* [`bash_completion`](#bash_completion)
-* [`extra_components`](#extra_components)
-* [`install_dir`](#install_dir)
-* [`version`](#version)
-* [`zsh_completion`](#zsh_completion)
+* [`autoupdate`](#-gcloudsdk--autoupdate)
+* [`bash_completion`](#-gcloudsdk--bash_completion)
+* [`extra_components`](#-gcloudsdk--extra_components)
+* [`install_dir`](#-gcloudsdk--install_dir)
+* [`version`](#-gcloudsdk--version)
+* [`zsh_completion`](#-gcloudsdk--zsh_completion)
 
-##### <a name="autoupdate"></a>`autoupdate`
+##### <a name="-gcloudsdk--autoupdate"></a>`autoupdate`
 
 Data type: `Boolean`
 
 Boolean value to determine whether every Puppet run should try to update the
 components of the gcloud SDK.
 
-##### <a name="bash_completion"></a>`bash_completion`
+##### <a name="-gcloudsdk--bash_completion"></a>`bash_completion`
 
 Data type: `Boolean`
 
 Boolean value to determine whether bash completions are enabled.
 
-##### <a name="extra_components"></a>`extra_components`
+##### <a name="-gcloudsdk--extra_components"></a>`extra_components`
 
 Data type: `Hash`
 
 A hash of additional components in gcloud to install.
 See gcloud::component for example.
 
-##### <a name="install_dir"></a>`install_dir`
+##### <a name="-gcloudsdk--install_dir"></a>`install_dir`
 
 Data type: `Stdlib::Absolutepath`
 
 The directory to which the SDK will be installed.
 
-##### <a name="version"></a>`version`
+##### <a name="-gcloudsdk--version"></a>`version`
 
 Data type: `String`
 
 The initial version of the SDK to download from Google.
 
-##### <a name="zsh_completion"></a>`zsh_completion`
+##### <a name="-gcloudsdk--zsh_completion"></a>`zsh_completion`
 
 Data type: `Boolean`
 
@@ -85,7 +85,7 @@ Boolean value to determine whether zsh completions are enabled.
 
 ## Defined types
 
-### <a name="gcloudsdkcomponent"></a>`gcloudsdk::component`
+### <a name="gcloudsdk--component"></a>`gcloudsdk::component`
 
 Manage a gcloud component's installation status
 
@@ -103,10 +103,10 @@ gcloudsdk::component { 'bigtable':
 
 The following parameters are available in the `gcloudsdk::component` defined type:
 
-* [`ensure`](#ensure)
-* [`component_id`](#component_id)
+* [`ensure`](#-gcloudsdk--component--ensure)
+* [`component_id`](#-gcloudsdk--component--component_id)
 
-##### <a name="ensure"></a>`ensure`
+##### <a name="-gcloudsdk--component--ensure"></a>`ensure`
 
 Data type: `Enum['absent', 'installed']`
 
@@ -114,7 +114,7 @@ The ensure status of the component, either 'absent' or 'installed'
 
 Default value: `'installed'`
 
-##### <a name="component_id"></a>`component_id`
+##### <a name="-gcloudsdk--component--component_id"></a>`component_id`
 
 Data type: `String`
 
