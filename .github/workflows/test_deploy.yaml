@@ -1,35 +1,13 @@
 ---
-name: 'test_deploy'
+name: 'test_build'
 
 'on':
   pull_request:
     branches:
       - 'main'
-  push:
-    branches:
-      - 'main'
 
 jobs:
-  forge_deploy:
-
-    runs-on: 'ubuntu-latest'
-
-    steps:
-      - name: 'Checkout repo'
-        uses: 'actions/checkout@v3'
-
-      - name: 'Set up Ruby'
-        uses: 'ruby/setup-ruby@v1.146.0'
-        env:
-          BUNDLE_SILENCE_ROOT_WARNING: '1'
-          BUNDLE_WITH: 'development'
-        with:
-          bundler-cache: true
-          ruby-version: '2.7'
-          rubygems: 'latest'
-
-      - name: 'Module build'
-        run: 'bundle exec pdk build --force'
-
-      - name: 'Test module install'
-        run: 'bundle exec puppet module install pkg/broadinstitute-gcloudsdk-*.tar.gz'
+  test_build:
+    uses: broadinstitute/shared-workflows/.github/workflows/puppet-build.yaml@v2.2.0
+    with:
+      puppet_package_name: broadinstitute-gcloudsdk
