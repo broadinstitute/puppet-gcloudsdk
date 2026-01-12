@@ -3,5 +3,7 @@
 ---
 fixtures:
   forge_modules:
-    archive: 'puppet/archive'
-    stdlib: 'puppetlabs/stdlib'
+    archive:
+      repo: puppet/archive
+    stdlib:
+      repo: puppetlabs/stdlib

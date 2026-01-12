@@ -14,7 +14,8 @@ Download and Install Google Cloud Sdk.
 
 ## Module Description
 
-Google Cloud SDK is a set of tools that you can use to manage resources and applications hosted on Google Cloud Platform.
+Google Cloud SDK is a set of tools that you can use to manage resources and
+applications hosted on Google Cloud Platform.
 
 These tools include:
 
@@ -32,7 +33,8 @@ These tools include:
 
 ## Usage
 
-If you just want a Google Cloud SDK installation with the default options you can run :
+If you just want a Google Cloud SDK installation with the default options you
+can run :
 
 By default, Install Latest Version of SDK with following tools:
 
@@ -45,7 +47,8 @@ By default, Install Latest Version of SDK with following tools:
 include gcloudsdk
 ```
 
-If you need to customize `version` and `install_dir` configuration options, you need to do the following:
+If you need to customize `version` and `install_dir` configuration options, you
+need to do the following:
 
 ```puppet
 class { 'gcloudsdk':
@@ -63,7 +66,8 @@ class { 'gcloudsdk':
 }
 ```
 
-If you need to add any additional gcloud components, you can do this with the `gcloudsdk::component` defined type using the component's ID:
+If you need to add any additional gcloud components, you can do this with the
+`gcloudsdk::component` defined type using the component's ID:
 
 ```puppet
 gcloudsdk::component { 'bigtable':
@@ -92,16 +96,19 @@ This can also all be done from Hiera as well:
 
 ```yaml
 gcloudsdk:
-  extra_components:
-    bigtable:
-      ensure: 'installed'
-  install_dir: '/opt'
-  version: '108.0.0'
+    extra_components:
+        bigtable:
+            ensure: "installed"
+    install_dir: "/opt"
+    version: "108.0.0"
 ```
 
-Restart the shell or terminal after gsutil package is installed. This will set the path of gsutil in the default environment path variable.
+Restart the shell or terminal after gsutil package is installed. This will set
+the path of gsutil in the default environment path variable.
 
-Alternatively, you can source install_gsutil.sh shell script by executing the following command or export the path to configure gsutil to work without restarting the shell.
+Alternatively, you can source install_gsutil.sh shell script by executing the
+following command or export the path to configure gsutil to work without
+restarting the shell.
 
 ```sh
 source /etc/profile.d/gcloud_path.sh
@@ -120,7 +127,8 @@ The original module is based on work by Ranjith Kumar.
 PRs with improvements are always welcome.
 
 [overview]: https://github.com/broadinstitute/puppet-gcloudsdk#overview
-[module-description]: https://github.com/broadinstitute/puppet-gcloudsdk#module-description
+[module-description]:
+    https://github.com/broadinstitute/puppet-gcloudsdk#module-description
 [usage]: https://github.com/broadinstitute/puppet-gcloudsdk#usage
 [authors]: https://github.com/broadinstitute/puppet-gcloudsdk#authors
 [development]: https://github.com/broadinstitute/puppet-gcloudsdk#development

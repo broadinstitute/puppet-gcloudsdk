@@ -6,11 +6,13 @@
 
 ### Classes
 
-* [`gcloudsdk`](#gcloudsdk): Manage a gcloud SDK installation installed directly from Google
+- [`gcloudsdk`](#gcloudsdk): Manage a gcloud SDK installation installed directly
+  from Google
 
 ### Defined types
 
-* [`gcloudsdk::component`](#gcloudsdk--component): Manage a gcloud component's installation status
+- [`gcloudsdk::component`](#gcloudsdk--component): Manage a gcloud component's
+  installation status
 
 ## Classes
 
@@ -38,12 +40,12 @@ class { 'gcloudsdk':
 
 The following parameters are available in the `gcloudsdk` class:
 
-* [`autoupdate`](#-gcloudsdk--autoupdate)
-* [`bash_completion`](#-gcloudsdk--bash_completion)
-* [`extra_components`](#-gcloudsdk--extra_components)
-* [`install_dir`](#-gcloudsdk--install_dir)
-* [`version`](#-gcloudsdk--version)
-* [`zsh_completion`](#-gcloudsdk--zsh_completion)
+- [`autoupdate`](#-gcloudsdk--autoupdate)
+- [`bash_completion`](#-gcloudsdk--bash_completion)
+- [`extra_components`](#-gcloudsdk--extra_components)
+- [`install_dir`](#-gcloudsdk--install_dir)
+- [`version`](#-gcloudsdk--version)
+- [`zsh_completion`](#-gcloudsdk--zsh_completion)
 
 ##### <a name="-gcloudsdk--autoupdate"></a>`autoupdate`
 
@@ -62,8 +64,8 @@ Boolean value to determine whether bash completions are enabled.
 
 Data type: `Hash`
 
-A hash of additional components in gcloud to install.
-See gcloud::component for example.
+A hash of additional components in gcloud to install. See gcloud::component for
+example.
 
 ##### <a name="-gcloudsdk--install_dir"></a>`install_dir`
 
@@ -101,10 +103,11 @@ gcloudsdk::component { 'bigtable':
 
 #### Parameters
 
-The following parameters are available in the `gcloudsdk::component` defined type:
+The following parameters are available in the `gcloudsdk::component` defined
+type:
 
-* [`ensure`](#-gcloudsdk--component--ensure)
-* [`component_id`](#-gcloudsdk--component--component_id)
+- [`ensure`](#-gcloudsdk--component--ensure)
+- [`component_id`](#-gcloudsdk--component--component_id)
 
 ##### <a name="-gcloudsdk--component--ensure"></a>`ensure`
 
