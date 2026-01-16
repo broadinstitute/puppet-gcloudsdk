@@ -7,9 +7,11 @@ name: checks
       - main
 permissions:
   contents: read
-  pull-requests: read
+  pull-requests: write
 
 jobs:
+  conventional-commits:
+    uses: broadinstitute/shared-workflows/.github/workflows/conventional-commit.yaml@v6.0.0
   pre-commit:
     uses: broadinstitute/shared-workflows/.github/workflows/pre-commit.yaml@v6.0.0
   static-analysis:

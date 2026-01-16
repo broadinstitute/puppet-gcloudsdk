@@ -1,5 +1,5 @@
 exclude-labels=duplicate,question,invalid,maintenance,wontfix
 pr-wo-labels=false
-project=puppet-qualys_agent
+project=puppet-gcloudsdk
 unreleased=true
 user=broadinstitute
