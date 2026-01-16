@@ -1,0 +1,8 @@
+---
+site_name: Puppet Google SDK Module
+
+nav:
+  - Home: README.md
+
+plugins:
+  - techdocs-core
