@@ -3,6 +3,8 @@ version: 2
 updates:
   # We use PDK, so don't auto-update Ruby dependencies
   # - package-ecosystem: bundler
+  #   commit-message:
+  #     prefix: fix(deps)
   #   directory: /
   #   groups:
   #     bundler:
@@ -12,6 +14,8 @@ updates:
   #     # Check for updates to Ruby gems every month
   #     interval: monthly
   - package-ecosystem: github-actions
+    commit-message:
+      prefix: fix(deps)
     directory: /
     groups:
       actions:

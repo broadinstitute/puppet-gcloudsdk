@@ -1,4 +1,4 @@
 {
-    "proseWrap": "always",
-    "trailingComma": "es5"
+  "proseWrap": "always",
+  "trailingComma": "es5"
 }

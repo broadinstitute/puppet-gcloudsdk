@@ -96,11 +96,11 @@ This can also all be done from Hiera as well:
 
 ```yaml
 gcloudsdk:
-    extra_components:
-        bigtable:
-            ensure: "installed"
-    install_dir: "/opt"
-    version: "108.0.0"
+  extra_components:
+    bigtable:
+      ensure: "installed"
+  install_dir: "/opt"
+  version: "108.0.0"
 ```
 
 Restart the shell or terminal after gsutil package is installed. This will set
@@ -128,7 +128,7 @@ PRs with improvements are always welcome.
 
 [overview]: https://github.com/broadinstitute/puppet-gcloudsdk#overview
 [module-description]:
-    https://github.com/broadinstitute/puppet-gcloudsdk#module-description
+  https://github.com/broadinstitute/puppet-gcloudsdk#module-description
 [usage]: https://github.com/broadinstitute/puppet-gcloudsdk#usage
 [authors]: https://github.com/broadinstitute/puppet-gcloudsdk#authors
 [development]: https://github.com/broadinstitute/puppet-gcloudsdk#development
